@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stddef.h>
+#include <stdlib.h>
 
 /**
  * set_bit - Sets the value of a bit at a given index to 1.
@@ -7,13 +9,21 @@
  *
  * Return: If an error occurs - -1.
  *         Otherwise - 1.
- */
+*/
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	if (index >= (sizeof(unsigned long int) * 8))
-		return (-1);
+	unsigned long int *tmp;
 
-	*n ^= (1 << index);
+	if (n == NULL)
+	return (-1);
 
+	tmp = malloc(sizeof(unsigned long int));
+	if (tmp == NULL)
+	return (-1);
+
+	*tmp = 1 << index;
+	*n |= *tmp;
+
+	free(tmp);
 	return (1);
 }
