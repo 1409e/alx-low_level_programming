@@ -1,18 +1,26 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
  * get_endianness - Checks the endianness.
  *
  * Return: If big-endian - 0.
  *         If little-endian - 1.
- */
+*/
 int get_endianness(void)
 {
-	int num = 1;
-	char *endian = (char *)&num;
+	char *byte_ptr;
+	int *int_ptr;
+	int result;
 
-	if (*endian == 1)
-		return (1);
+	int_ptr = malloc(sizeof(int));
 
-	return (0);
+	*int_ptr = 1;
+
+	byte_ptr = (char *)int_ptr;
+	result = byte_ptr[0] == 1;
+
+	free(int_ptr);
+
+	return (result);
 }
