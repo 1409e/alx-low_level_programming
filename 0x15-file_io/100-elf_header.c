@@ -7,7 +7,7 @@
 
 /**
  * Prints an error message to stderr.
- * @param msg the error message to print
+ * @param: msg the error message to print
  */
 void print_error(const char* msg) {
     fprintf(stderr, "Error: %s\n", msg);
@@ -95,4 +95,4 @@ int main(int argc, char* argv[])
 		case ET_NONE: printf("NONE (Unknown type)\n"); break;
 		case ET_REL: printf("REL (Relocatable file)\n"); break;
 		case ET_EXEC: printf("EXEC (Executable file)\n"); break;
-    	}
+}

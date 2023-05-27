@@ -7,11 +7,11 @@
 #define BUFFER_SIZE 1024
 
 /**
- * main - Copies the content of a file to another file
- * @argc: Number of arguments
- * @argv: Array of arguments
+ * main - Copies the content of a file to another file.
+ * @argc: Number of arguments.
+ * @argv: Array of arguments.
  *
- * Return: 0 if successful, otherwise the error code
+ * Return: 0 if successful, otherwise error code.
 */
 int main(int argc, char *argv[])
 {

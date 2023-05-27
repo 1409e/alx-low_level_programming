@@ -3,8 +3,8 @@
 
 /**
  * print_binary - Prints the binary representation of a number.
- * @n: The number to be printed in binary.
-*/
+ * @n: Number to be printed in binary.
+ */
 void print_binary(unsigned long int n)
 {
 	unsigned long int mask = 1;
